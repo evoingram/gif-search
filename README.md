@@ -26,8 +26,9 @@ visit `localhost:8080` in web browser
 
 ## Usage
 
-```
-```
+This project has two environments, staging and production:
+
+`auto-deploys to staging` > `manually test/troubleshoot in staging` > `manually deploy to production via Heroku website`
 
 ## API
 
