@@ -23,7 +23,7 @@ exports.seed = (knex) => {
 					email: 'customer@aquoco.onmicrosoft.com'
 				},
 				{
-					customersid: 4,
+					id: 4,
 					username: 'customer4',
 					password: 'eyJwYXNzd29yZCI6InBhc3N3b3JkIn0',
 					email: 'customer4@aquoco.onmicrosoft.com'
