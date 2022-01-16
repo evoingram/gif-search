@@ -5,7 +5,13 @@
 
 Search GIFs via the GIPHY API.
 
-TODO: Fill out this long description.
+## Key Features
+
+- Live solo project
+- X endpoints
+- Feature
+- Feature
+- Feature
 
 ## Table of Contents
 
@@ -19,8 +25,8 @@ TODO: Fill out this long description.
 ## Install
 
 ```
-npm install
-npm run server
+npm server
+npm start
 visit `localhost:8080` in web browser
 ```
 
@@ -33,7 +39,27 @@ This project has two environments, staging and production:
 - staging:     https://gif-search-elingram.herokuapp.com
 - production:  https://gif-search-elingram-prod.herokuapp.com
 
-## API
+### Tech Stack
+
+Back end deployed to `Heroku` and built using:
+
+- [Node.js](https://github.com/nodejs/node):  a JavaScript runtime.
+- [Knex](https://github.com/knex/knex):  a query builder for PostgreSQL, MySQL and SQLite3, designed to be flexible, portable, and fun to use.
+- [Express](https://github.com/expressjs/express):  a fast, unopinionated, minimalist web framework for Node.
+- [bcrypt](https://github.com/pyca/bcrypt/):  modern(-ish) password hashing for your software and your servers.
+- [PostgreSQL](http://postgresql.org/):  open-source relational database supporting both SQL & JSON querying.
+
+### Testing
+
+- All endpoints have been tested and documented via both Jest & Postman.
+
+## API (Documentation in progress)
+
+### [DB SCHEMA]()   |   [BASE URL](https://gif-search-elingram-prod.herokuapp.com/api)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)
+### [POSTMAN DOCUMENTATION]()   |   [SAMPLE RESPONSE](https://github.com/evoingram/gif-search/blob/master/docs/sample-response.json)
+
+- Postman Docs were last published on 01/00/2022.
+- Postman docs contain examples of all get, post, and put endpoint body submissions AND responses.
 
 ## Maintainers
 
