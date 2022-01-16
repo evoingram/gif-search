@@ -2,8 +2,8 @@ const request = require("supertest");
 
 const server = require("./server.js");
 
-describe("server", () => {
-	describe("GET /", () => {
+describe("server", function() {
+	describe("GET /", function() {
 		it("should return 200", function() {
 			return request(server)
 				.get("/")
