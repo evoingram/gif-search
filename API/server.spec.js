@@ -2,9 +2,9 @@ const request = require("supertest");
 
 const server = require("./server.js");
 
-describe("server", function() {
-	describe("GET /", function() {
-		it("should return 200", function() {
+describe("server", function () {
+	describe("GET /", function () {
+		it("should return 200", function () {
 			return request(server)
 				.get("/")
 				.then(res => {
@@ -12,7 +12,7 @@ describe("server", function() {
 				});
 		});
 
-		it("should return HTML", function() {
+		it("should return HTML", function () {
 			return request(server)
 				.get("/")
 				.then(res => {
