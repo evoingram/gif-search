@@ -2,6 +2,11 @@ const router = require('express').Router();
 
 const Users = require('./user-model.js');
 
+// User/password validation is NOT required on any routes.
+// However, the feature is available and easily installed should it be requested.
+
+// const restricted = require('../auth/restriction.js');
+
 router.get('/', (req, res) => {
 	Users.find()
 		.then(users => {

@@ -1,3 +1,7 @@
+
+// User/password validation is NOT required on any routes.
+// However, the feature is available should it be requested.
+
 const validateUser = (user) => {
 	const errors = [];
 
