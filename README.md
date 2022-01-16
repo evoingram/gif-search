@@ -30,6 +30,9 @@ This project has two environments, staging and production:
 
 `auto-deploys to staging` > `manually test/troubleshoot in staging` > `manually deploy to production via Heroku website`
 
+- staging:     https://gif-search-elingram.herokuapp.com
+- production:  https://gif-search-elingram-prod.herokuapp.com
+
 ## API
 
 ## Maintainers
