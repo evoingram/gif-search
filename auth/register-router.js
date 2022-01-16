@@ -18,10 +18,18 @@ router.post('/', (req, res) => {
 
 		Users.add(user)
 			.then(saved => {
-				res.status(201).json({ id: saved.id, username: saved.username, token: token });
+				res.status(201).json({
+					id: saved.id,
+					username: saved.username,
+					email: saved.email,
+					token: token
+				});
 			})
 			.catch(error => {
-				res.status(500).json(error);
+				res.status(500).json({
+					message: `invalid credentials from register router:  ${user.email}`,
+					error: error
+				});
 			});
 	} else {
 		res.status(400).json({
