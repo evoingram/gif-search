@@ -1,0 +1,53 @@
+name: pull-request
+
+on:
+  pull_request:
+    branches: [ master ]
+jobs:
+  conventional:
+    name: Conventional PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint pull request title
+        uses: jef/conventional-commits-pr-action@v1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+  lint-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: stefanoeb/eslint-action@1.0.2
+      - name: lint files
+        run: npm run lint:js:fix
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: stefanoeb/jest-action@1.0.3
+      - name: run unit tests 
+        run: npm run test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
+  code-coverage:
+    name: Jest Code Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: yarn install
+      - name: Run Tests
+        run: yarn jest --coverage --json --outputFile=/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json
+      - name: Jest Code Coverage GitHub Action
+        uses: mattallty/jest-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          changes-only: false
+          coverage-comment: true
+          test-command: "echo done"

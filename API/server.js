@@ -9,6 +9,7 @@ const server = express();
 server.use(helmet());
 server.use(cors());
 server.use(express.json());
+
 server.use(logger);
 
 server.get('/', (req, res) => {
