@@ -14,6 +14,6 @@ server.use(logger);
 
 server.get('/', (req, res) => {
 	res.send('<h1>🚀</h1>');
-})
+});
 
 module.exports = server;
