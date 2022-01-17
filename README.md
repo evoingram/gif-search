@@ -58,7 +58,7 @@ Back end deployed to `Heroku` and built using:
 - [Express](https://github.com/expressjs/express):  a fast, unopinionated, minimalist web framework for Node.
 - [bcrypt](https://github.com/pyca/bcrypt/):  modern(-ish) password hashing for your software and your servers.
 - [PostgreSQL](http://postgresql.org/):  open-source relational database supporting both SQL & JSON querying.
-- [Jest](https://github.com/facebook/jest):  delightful JavaScript Testing.
+- [Jest](https://github.com/facebook/jest):  delightful JavaScript testing.
 - [Supertest](https://github.com/visionmedia/supertest):  super-agent driven library for testing node.js HTTP servers using a fluent API.
 
 ### Testing
