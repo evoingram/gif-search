@@ -12,6 +12,7 @@ Search GIFs via the GIPHY API.
 - runs on port 8080
 - uses Giphy API
 - responses are in JSON
+- optional authentication
 - returns either 0 or 5 results at a time
 - extensive & easy to understand documentation
 - CI/CD pipeline:  
