@@ -14,7 +14,13 @@ Search GIFs via the GIPHY API.
 - responses are in JSON
 - returns either 0 or 5 results at a time
 - extensive & easy to understand documentation
-- CI/CD pipeline:  pre-comment and/or PR checks for linting, passing all tests, conventional commit messages check, code coverage check, and auto-deploy
+- CI/CD pipeline:  
+  - pre-comment and/or PR checks for:
+    - linting
+    - passing all tests
+    - conventional commit messages check
+    - code coverage check
+    - auto-deploy to staging & manual deploy to production via Heroku
 
 ## Table of Contents
 
@@ -64,6 +70,7 @@ Back end deployed to `Heroku` and built using:
 
 - Postman Docs were last published on 01/17/2022.
 - Postman docs contain examples of all GET, POST, and PUT endpoint body submissions AND responses.
+- Download this project's [Postman collection](https://www.getpostman.com/collections/e81a71abbcce47bd7474) here.
 
 ## Maintainer
 
