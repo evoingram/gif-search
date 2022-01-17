@@ -13,6 +13,7 @@ Search GIFs via the GIPHY API.
 - uses Giphy API
 - responses are in JSON
 - returns either 0 or 5 results at a time
+- extensive & easy to understand documentation
 - CI/CD pipeline:  pre-comment and/or PR checks for linting, passing all tests, conventional commit messages check, code coverage check, and auto-deploy
 
 ## Table of Contents
@@ -50,6 +51,8 @@ Back end deployed to `Heroku` and built using:
 - [Express](https://github.com/expressjs/express):  a fast, unopinionated, minimalist web framework for Node.
 - [bcrypt](https://github.com/pyca/bcrypt/):  modern(-ish) password hashing for your software and your servers.
 - [PostgreSQL](http://postgresql.org/):  open-source relational database supporting both SQL & JSON querying.
+- [Jest](https://github.com/facebook/jest):  delightful JavaScript Testing.
+- [Supertest](https://github.com/visionmedia/supertest):  super-agent driven library for testing node.js HTTP servers using a fluent API.
 
 ### Testing
 
@@ -57,13 +60,12 @@ Back end deployed to `Heroku` and built using:
 
 ## API
 
-### [BASE URL](https://gif-search-elingram-prod.herokuapp.com/)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)
-### [POSTMAN DOCUMENTATION]()   |   [SAMPLE RESPONSE](https://github.com/evoingram/gif-search/blob/master/docs/sample-response.json)
+### [BASE URL](https://gif-search-elingram-prod.herokuapp.com/)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)   |   [POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/6401823/UVXknFFM)   |   [SAMPLE RESPONSE](https://github.com/evoingram/gif-search/blob/master/docs/sample-response.json)
 
-- Postman Docs were last published on 01/16/2022.
-- Postman docs contain examples of all get, post, and put endpoint body submissions AND responses.
+- Postman Docs were last published on 01/17/2022.
+- Postman docs contain examples of all GET, POST, and PUT endpoint body submissions AND responses.
 
-## Maintainers
+## Maintainer
 
 [@evoingram](https://github.com/evoingram)
 

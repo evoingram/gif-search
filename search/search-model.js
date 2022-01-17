@@ -33,5 +33,4 @@ async function findBySearchTerm (searchTerm, limit) {
 	} catch (error) {
 		console.error(error);
 	}
-	return responseData;
 }
