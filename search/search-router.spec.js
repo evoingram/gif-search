@@ -42,6 +42,8 @@ describe('test search router', function () {
 				.get('/search/cheeseburger')
 				.then((res) => {
 					expect(res).toStrictEqual(giphyModified5Results);
+					expect(res.data[0]).toHaveProperty('gif_id');
+					expect(res.data[0]).toHaveProperty('url');
 				});
 		});
 
