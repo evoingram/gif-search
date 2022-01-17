@@ -14,7 +14,13 @@ Search GIFs via the GIPHY API.
 - responses are in JSON
 - returns either 0 or 5 results at a time
 - extensive & easy to understand documentation
-- CI/CD pipeline:  pre-comment and/or PR checks for linting, passing all tests, conventional commit messages check, code coverage check, and auto-deploy
+- CI/CD pipeline:  
+  - pre-comment and/or PR checks for:
+    - linting
+    - passing all tests
+    - conventional commit messages check
+    - code coverage check
+    - auto-deploy to staging & manual deploy to production via Heroku
 
 ## Table of Contents
 
