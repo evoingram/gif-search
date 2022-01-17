@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
 
 // PUT:  update user
 router.put('/:id', (req, res) => {
-	const usersid = req.params.usersid;
+	const usersid = req.params.id;
 	const updatedUser = req.body;
 
 	Users.update(usersid, updatedUser)
