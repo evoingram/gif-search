@@ -13,6 +13,7 @@ Search GIFs via the GIPHY API.
 - uses Giphy API
 - responses are in JSON
 - returns either 0 or 5 results at a time
+- CI/CD pipeline:  pre-comment and/or PR checks for linting, passing all tests, conventional commit messages check, code coverage check, and auto-deploy
 
 ## Table of Contents
 
