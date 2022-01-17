@@ -28,7 +28,6 @@ router.post('/', (req, res) => {
 				res.status(500).json({
 					message: `invalid credentials from register router:  ${user.email}`,
 					error: error,
-					user: user,
 					token: token
 				});
 			});
