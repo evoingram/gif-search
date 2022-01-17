@@ -55,9 +55,9 @@ Back end deployed to `Heroku` and built using:
 
 - Endpoints have been tested and documented via both Jest & Postman.
 
-## API (Documentation in progress)
+## API
 
-[BASE URL](https://gif-search-elingram-prod.herokuapp.com/api)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)
+### [BASE URL](https://gif-search-elingram-prod.herokuapp.com/)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)
 ### [POSTMAN DOCUMENTATION]()   |   [SAMPLE RESPONSE](https://github.com/evoingram/gif-search/blob/master/docs/sample-response.json)
 
 - Postman Docs were last published on 01/16/2022.
