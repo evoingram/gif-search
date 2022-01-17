@@ -3,40 +3,144 @@ const db = require('../data/dbConfig');
 module.exports = {
 	add,
 	find,
-	findBy,
-	findById,
+	findByEmailOrId,
+	findByUsername,
 	update,
 	remove
 };
 
 function find () {
-	return db('users').select('id', 'username', 'email');
+	try {
+		return db('users').raw('SELECT id,username,email FROM users;')
+			.then(users => {
+				try {
+					return users.rows;
+				} catch (error) {
+					console.error(error);
+				}
+			})
+			.catch(error => {
+				console.error({
+					error: error
+				});
+			});
+	} catch (error) {
+		console.error(error);
+	}
 }
 
-function findBy (filter) {
-	return db('users').where(filter);
+function findByEmailOrId (fieldName, fieldValue) {
+	let foundUserProfile;
+	try {
+		return db('users').raw(`SELECT id,username,email FROM users WHERE ${fieldName}='${fieldValue}' LIMIT 1;`)
+			.then(id => {
+				try {
+					foundUserProfile = id.rows[0];
+					return foundUserProfile;
+				} catch (error) {
+					console.error(error);
+				}
+			})
+			.catch(error => {
+				console.error({
+					error: error
+				});
+			});
+	} catch (error) {
+		console.error(error);
+	}
+	return foundUserProfile;
 }
 
+function findByUsername (username) {
+	let foundUserProfile;
+	try {
+		return db('users').raw(`SELECT id,username,password,email FROM users WHERE username='${username}' LIMIT 1;`)
+			.then(id => {
+				try {
+					foundUserProfile = id.rows[0];
+					return foundUserProfile;
+				} catch (error) {
+					console.error(error);
+				}
+			})
+			.catch(error => {
+				console.error({
+					error: error
+				});
+			});
+	} catch (error) {
+		console.error(error);
+	}
+	return foundUserProfile;
+}
+
+// adds a user (register function)
 async function add (user) {
-	const [id] = await db('users').insert(user, 'id');
-	return findById(id);
-}
-
-function findById (id) {
-	return db('users')
-		.select('id', 'username', 'email')
-		.where({ id })
-		.first();
+	try {
+		await db('users').insert(user, 'id').into('users').then(id => {
+			try {
+				return findByEmailOrId('id', id);
+			} catch (error) {
+				console.error(error);
+			}
+		})
+			.catch(error => {
+				console.error({
+					error: error
+				});
+			});
+	} catch (error) {
+		console.error(error);
+	}
 }
 
 function update (id, user) {
-	return db('users')
-		.where('id', Number(id))
-		.update(user);
-}
+	let foundUserProfile;
+	try {
+		return db('users')
+			.where('id', Number(id))
+			.update(user)
+			.then(id => {
+				try {
+					foundUserProfile = id.rows[0];
+					return foundUserProfile;
+				} catch (error) {
+					console.error(error);
+				}
+			})
+			.catch(error => {
+				console.error({
+					error: error
+				});
+			});
+	} catch (error) {
+		console.error(error);
+	}
+	return foundUserProfile;
+};
 
 function remove (id) {
-	return db('users')
-		.where('id', Number(id))
-		.del();
-}
+	let foundUserProfile;
+	try {
+		return db('users')
+			.where('id', Number(id))
+			.del()
+			.then(id => {
+				try {
+					foundUserProfile = id.rows[0];
+					return foundUserProfile;
+				} catch (error) {
+					console.error(error);
+				}
+			})
+			.catch(error => {
+				console.error({
+					error: error
+				});
+			});
+	} catch (error) {
+		console.error(error);
+	}
+	return foundUserProfile;
+};

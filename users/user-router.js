@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
 	if (!id) {
 		res.status(404).json({ message: 'The user with the specified id does not exist.' });
 	} else {
-		Users.findById(id)
+		Users.findByEmailOrId('id', id)
 			.then(user => {
 				res.status(201).json(user);
 			})

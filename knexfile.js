@@ -2,7 +2,7 @@ module.exports = {
 
 	development: {
 		client: 'pg',
-		connection: process.env.DATABASE_URL_STAGING,
+		connection: 'postgres://postgres:postgres@localhost:5432/gifsearchdb',
 		migrations: {
 			directory: './data/migrations'
 		},
