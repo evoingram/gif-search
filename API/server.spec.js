@@ -9,13 +9,6 @@ describe('server', function () {
 				.get('/')
 				.then(res => {
 					expect(res.status).toBe(200);
-				});
-		});
-
-		it('should return HTML', function () {
-			return request(server)
-				.get('/')
-				.then(res => {
 					expect(res.type).toMatch(/html/i);
 				});
 		});
