@@ -64,6 +64,7 @@ Back end deployed to `Heroku` and built using:
 
 - Postman Docs were last published on 01/17/2022.
 - Postman docs contain examples of all GET, POST, and PUT endpoint body submissions AND responses.
+- Download this project's [Postman collection](https://www.getpostman.com/collections/e81a71abbcce47bd7474) here.
 
 ## Maintainer
 
