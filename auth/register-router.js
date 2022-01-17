@@ -15,7 +15,6 @@ router.post('/', (req, res) => {
 		user.password = hash;
 
 		const token = Token.getJwt(user.username);
-
 		Users.add(user)
 			.then(saved => {
 				res.status(201).json({
@@ -28,7 +27,8 @@ router.post('/', (req, res) => {
 			.catch(error => {
 				res.status(500).json({
 					message: `invalid credentials from register router:  ${user.email}`,
-					error: error
+					error: error,
+					token: token
 				});
 			});
 	} else {

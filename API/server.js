@@ -7,6 +7,7 @@ const logger = require('../middleware/logger');
 const usersRouter = require('../users/user-router');
 const loginRouter = require('../auth/login-router.js');
 const registerRouter = require('../auth/register-router.js');
+const searchRouter = require('../search/search-router');
 
 const server = express();
 
@@ -16,6 +17,7 @@ server.use(express.json());
 
 server.use(logger);
 
+server.use('/search', searchRouter);
 server.use('/api/login', loginRouter);
 server.use('/api/register', registerRouter);
 server.use('/api/users', usersRouter);
