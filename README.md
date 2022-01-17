@@ -1,17 +1,18 @@
 # gif-search
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![Maintainability](https://api.codeclimate.com/v1/badges/26f95f37ddb169a39549/maintainability)](https://codeclimate.com/github/evoingram/gif-search/maintainability) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/26f95f37ddb169a39549/maintainability)](https://codeclimate.com/github/evoingram/gif-search/maintainability)
 
 Search GIFs via the GIPHY API.
 
 ## Key Features
 
-- Live solo project
-- X endpoints
-- Feature
-- Feature
-- Feature
+- GIF search web service
+- 7 endpoints
+- runs on port 8080
+- uses Giphy API
+- responses are in JSON
+- returns either 0 or 5 results at a time
 
 ## Table of Contents
 
@@ -51,14 +52,14 @@ Back end deployed to `Heroku` and built using:
 
 ### Testing
 
-- All endpoints have been tested and documented via both Jest & Postman.
+- Endpoints have been tested and documented via both Jest & Postman.
 
 ## API (Documentation in progress)
 
-### [DB SCHEMA]()   |   [BASE URL](https://gif-search-elingram-prod.herokuapp.com/api)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)
+[BASE URL](https://gif-search-elingram-prod.herokuapp.com/api)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)
 ### [POSTMAN DOCUMENTATION]()   |   [SAMPLE RESPONSE](https://github.com/evoingram/gif-search/blob/master/docs/sample-response.json)
 
-- Postman Docs were last published on 01/00/2022.
+- Postman Docs were last published on 01/16/2022.
 - Postman docs contain examples of all get, post, and put endpoint body submissions AND responses.
 
 ## Maintainers

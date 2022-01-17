@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
 	const id = req.params.id;
 	if (!id) {
-		res.status(404).json({ message: 'The user with the specified id does not exist.' });
+		res.status(404).json({ message: `The user with the specified id ${id} does not exist.` });
 	} else {
 		Users.findByEmailOrId('id', id)
 			.then(user => {
@@ -54,7 +54,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
 	const id = req.params.id;
 	if (!id) {
-		res.status(404).json({ message: 'The user with the specified ID does not exist.' });
+		res.status(404).json({ message: `The user with the specified id ${id} does not exist.` });
 	}
 	Users.remove(id)
 		.then(user => {
