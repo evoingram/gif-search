@@ -60,7 +60,7 @@ Back end deployed to `Heroku` and built using:
 
 ## API
 
-### [BASE URL](https://gif-search-elingram-prod.herokuapp.com/)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)   |   [POSTMAN DOCUMENTATION]()   |   [SAMPLE RESPONSE](https://github.com/evoingram/gif-search/blob/master/docs/sample-response.json)
+### [BASE URL](https://gif-search-elingram-prod.herokuapp.com/)   |   [ENDPOINTS](https://github.com/evoingram/gif-search/blob/master/docs/endpoints.md)   |   [POSTMAN DOCUMENTATION](https://documenter.getpostman.com/view/6401823/UVXknFFM)   |   [SAMPLE RESPONSE](https://github.com/evoingram/gif-search/blob/master/docs/sample-response.json)
 
 - Postman Docs were last published on 01/17/2022.
 - Postman docs contain examples of all GET, POST, and PUT endpoint body submissions AND responses.
